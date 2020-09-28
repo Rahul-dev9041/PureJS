@@ -1,0 +1,63 @@
+const TicketApp = function(availability,user,age,qty,movietype,seattype) {
+this.availability = availability;
+this.user = {
+"name":user,
+"age": age
+};
+this.qty = parseInt(qty)
+this.movietype = movietype;
+this.seattype = seattype;
+}
+var bookMyshow = new TicketApp("Available","Sahil",20,{
+movietype1: "English",
+movietype2: "Hindi",
+movietype3: "Spanish"
+},
+{
+seattype1: "Normal",
+seattype2: "Executive",
+seattype3: "Premium"
+})
+TicketApp.prototype.SeatStatus = {
+seatstatus1: "Seat Booked",
+seatstatus2: "Seat Not Booked"
+}
+TicketApp.prototype.MovieStatus = {
+movie_status1: "Movie is Available",
+movie_status2: "Movie is  Not Available"
+}
+TicketApp.prototype.payment = {
+payment_status1: "Paid",
+payment_status2: "Unpaid"
+}
+var movietype = promp ("Enter a Movie Type English/Hindi/Spanish")
+var seat_type = promp ("Enter your Seat Type Normal/Executive/Premium")
+switch(movietype) {
+case bookMyshow.movietype.movietype1 :
+s = bookMyshow.movietype.movietype1 + bookMyshow.SeatStatus.seatstatus1 + bookMyshow.seattype.seattype2
+alert(`You have selected ${bookMyshow.movietype.movietype1} and ${bookMyshow.SeatStatus.seatstatus1} is ${bookMyshow.seattype.seattype2}`)
+break;
+case bookMyshow.movietype.movietype2 :
+a = bookMyshow.movietype.movietype2 + bookMyshow.SeatStatus.seatstatus1 + bookMyshow.seattype1
+alert(`You have selected ${bookMyshow.movietype.movietype2} and ${bookMyshow.SeatStatus.seatstatus1} = ${bookMyshow.seattype.seattype1}`)
+break;
+case bookMyshow.movietype.movietype3 :
+q = bookMyshow.movietype.movietype3 + bookMyshow.SeatStatus.seatstatus2 + bookMyshow.MovieStatus.movie_status2
+alert(`Sorry, we dont showcase ${bookMyshow.movietype.movietype3} and ${bookMyshow.MovieStatus.movie_status2}`)
+break;
+default:
+alert("Kindly Select MovieType")
+break; 
+}
+TicketApp.prototype.prices = function() {
+  if (this.availability === "Available") {
+  console.log("This is available")
+}
+else {
+  console.log("Not Available")
+}
+}
+TicketApp.prototype.ticketprice = function() {
+  var price = 200
+  return parseInt(this.qty)*price;
+}

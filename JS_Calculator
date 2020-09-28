@@ -1,0 +1,56 @@
+////////////////////////////////////////////////////////////
+
+var Calculate = "Calculator is working"
+var operators = prompt("Enter a operator +,-,*,/");
+var number0 = Number(prompt("Enter first Number"));
+var number00 = Number(prompt("Enter second Number"))
+switch(operators) {
+  case "+":
+sum = number0 + number00
+alert(`${number0} + ${number00} = ${sum}`);
+break;
+case "-":
+subtract = number0 - number00
+alert(`${number0} - ${number00} = ${subtract}`);
+break;
+case "*":
+multiply = number0 * number00
+alert(`${number0} * ${number00} = ${multiply}`);
+break;
+case "/":
+divide = number0 / number00
+alert(`${number0} / ${number00}  = ${divide}`);
+break;
+default:
+alert("End");
+break;
+};
+console.log(Calculate)
+
+
+///////////////////////////////////////////////////////////////
+
+
+var calculator = "It is Also Working";
+var operator = prompt("enter a operator");
+var number1 = Number(prompt("Enter a Number"));
+var number2 = Number(prompt("Enter second number"));
+if (operator === "+") {
+var add = number1 + number2;
+alert(`${number1} + ${number2} = ${add}`)
+};
+if (operator === "-") {
+var minus = number1 - number2;
+alert (`${number1} - ${number2} = ${minus}`)
+};
+if (operator === "*") {
+var multiply = number1 * number2;
+alert(`${number1} * ${number2} = ${multiply}`)
+};
+if (operator === "/") {
+var divide = number1 / number2;
+alert(`${number1} / ${number2} = ${divide}`)
+};
+console.log(calculator);
+
+////////////////////////////////////////////////////////////////

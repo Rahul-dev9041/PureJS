@@ -1,0 +1,41 @@
+var shoppingCart = (function() {
+var cart = [
+];
+return {
+addItem: function(values) {
+cart.push(values);
+},
+getItemCount: function () {
+return cart.length;
+},
+getTotal: function() {
+var prices = this.getItemCount(),
+    q = 0;
+while (prices--) {
+q += cart[prices].price;
+}
+return q
+},
+removeItems: function(values) {
+cart.pop(values);
+}
+};
+})();
+//here we can add items and their price
+shoppingCart.addItem({
+item: "Bread",
+price: 28
+});
+shoppingCart.addItem({
+item: "Butter",
+price: 30
+});
+//for removing items from array
+shoppingCart.removeItems({
+  item: [0]
+});
+
+console.log(shoppingCart.getTotal());
+console.log(shoppingCart.getItemCount());
+console.log(shoppingCart.removeItems());
+
